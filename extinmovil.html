@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Recarga de Extintores en Colombia | Bogotá, Bucaramanga y Cartagena</title>
+<meta name="description" content="Servicio profesional de recarga y mantenimiento de extintores en Bogotá, Bucaramanga y Cartagena. Certificación, inspección y atención inmediata.">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root{
+  --bg:#0a0f1c;
+  --card:#111827;
+  --muted:#9ca3af;
+  --text:#e5e7eb;
+  --red:#ff2d2d;
+  --red2:#ff5252;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,sans-serif}
+
+html{scroll-behavior:smooth}
+
+body{
+  background: radial-gradient(circle at top, #141a2a, var(--bg));
+  color:var(--text);
+}
+
+/* NAVBAR */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(10,15,28,.7);
+  backdrop-filter:blur(12px);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 40px;
+  border-bottom:1px solid rgba(255,255,255,.05);
+  z-index:1000;
+}
+
+.logo{
+  font-weight:800;
+  color:white;
+  letter-spacing:.5px;
+}
+
+nav ul{
+  display:flex;
+  gap:20px;
+  list-style:none;
+}
+
+nav a{
+  color:var(--muted);
+  text-decoration:none;
+  font-weight:500;
+  transition:.3s;
+}
+
+nav a:hover{color:white}
+
+/* HERO */
+.hero{
+  padding:140px 20px 80px;
+  text-align:center;
+}
+
+.hero h1{
+  font-size:52px;
+  font-weight:800;
+  line-height:1.1;
+}
+
+.hero p{
+  margin-top:15px;
+  color:var(--muted);
+  font-size:18px;
+}
+
+.badge{
+  display:inline-block;
+  padding:8px 14px;
+  border-radius:50px;
+  background:rgba(255,45,45,.15);
+  border:1px solid rgba(255,45,45,.3);
+  color:#ff6b6b;
+  margin-bottom:15px;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:25px;
+  padding:14px 24px;
+  background:linear-gradient(135deg,var(--red),var(--red2));
+  color:white;
+  border-radius:12px;
+  font-weight:700;
+  text-decoration:none;
+  box-shadow:0 10px 30px rgba(255,45,45,.3);
+  transition:.3s;
+}
+
+.btn:hover{transform:scale(1.05)}
+
+/* SECTIONS */
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+
+.section{
+  padding:80px 0;
+}
+
+.section h2{
+  text-align:center;
+  font-size:32px;
+  margin-bottom:30px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:rgba(17,24,39,.8);
+  border:1px solid rgba(255,255,255,.05);
+  padding:22px;
+  border-radius:16px;
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  border-color:rgba(255,45,45,.4);
+}
+
+.card h3{margin-bottom:10px}
+.card p{color:var(--muted);font-size:14px}
+
+/* CTA */
+.cta{
+  text-align:center;
+  padding:80px 20px;
+  background:linear-gradient(135deg, rgba(255,45,45,.1), transparent);
+  border-top:1px solid rgba(255,255,255,.05);
+  border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+.cta h2{font-size:34px}
+
+/* FORM */
+form{
+  display:grid;
+  gap:10px;
+  margin-top:20px;
+}
+
+input,textarea{
+  padding:12px;
+  border-radius:10px;
+  border:none;
+  background:#0f172a;
+  color:white;
+  outline:none;
+}
+
+textarea{height:100px;resize:none}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px;
+  color:var(--muted);
+}
+
+/* WHATSAPP */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25d366;
+  padding:14px 16px;
+  border-radius:50px;
+  color:white;
+  font-weight:700;
+  text-decoration:none;
+  box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+.card i{
+  color: #ff2d2d;
+  margin-right: 8px;
+}
+#legal .card{
+  border:1px solid rgba(255,255,255,.08);
+  background:rgba(17,24,39,.9);
+  padding:22px;
+  border-radius:16px;
+  transition:.3s;
+}
+
+#legal h3 i{
+  color:#ff2d2d;
+  margin-right:8px;
+}
+
+#legal .grid{
+  display:grid;
+  gap:20px;
+}
+#nosotros .card{
+  border:1px solid rgba(255,255,255,.08);
+  background:rgba(17,24,39,.9);
+  padding:22px;
+  border-radius:16px;
+  transition:.3s;
+}
+
+#nosotros h3 i{
+  color:#ff2d2d;
+  margin-right:8px;
+}
+
+#nosotros .grid{
+  display:grid;
+  gap:20px;
+}
+#servicios-digitales .card{
+  border:1px solid rgba(255,255,255,.08);
+  background:rgba(17,24,39,.9);
+  padding:22px;
+  border-radius:16px;
+  transition:.3s;
+}
+
+#servicios-digitales h3 i{
+  color:#ff2d2d;
+  margin-right:8px;
+}
+
+#servicios-digitales .grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+  gap:20px;
+}
+footer{
+  background: #0a0f1c;
+  color: var(--text);
+  font-size:14px;
+}
+
+footer h3{
+  margin-bottom:12px;
+  color:white;
+}
+
+footer a{
+  transition:0.3s;
+}
+
+footer a:hover{
+  color: #ff2d2d;
+}
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(10,15,28,.85);
+  backdrop-filter:blur(12px);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 40px;
+  border-bottom:1px solid rgba(255,255,255,.05);
+  z-index:1000;
+  flex-wrap:wrap;
+}
+
+/* LOGO */
+nav .logo{
+  font-weight:800;
+  color:white;
+  letter-spacing:.5px;
+  font-size:24px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* NAV LINKS */
+nav ul{
+  display:flex;
+  gap:20px;
+  list-style:none;
+}
+
+nav a{
+  color:var(--muted);
+  text-decoration:none;
+  font-weight:500;
+  transition:.3s;
+}
+
+nav a:hover{
+  color:white;
+}
+
+/* BOTON HAMBURGUESA */
+.menu-toggle{
+  display:none;
+  font-size:28px;
+  color:white;
+  cursor:pointer;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width:768px){
+  nav ul{
+    display:none;
+    flex-direction:column;
+    width:100%;
+    margin-top:10px;
+    background:rgba(10,15,28,.95);
+    border-radius:10px;
+    padding:10px 0;
+  }
+
+  nav ul.active{
+    display:flex;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+
+  nav li{
+    text-align:center;
+    margin:10px 0;
+  }
+}
+.hero {
+  padding:160px 20px 100px;
+  text-align:center;
+  background: radial-gradient(circle at top, #1a2236, #0a0f1c);
+  position:relative;
+}
+
+.hero .badge {
+  display:inline-block;
+  padding:10px 20px;
+  border-radius:50px;
+  background:rgba(255,45,45,0.15);
+  border:1px solid rgba(255,45,45,0.3);
+  color:#ff6b6b;
+  font-weight:600;
+  font-size:16px;
+  letter-spacing:0.5px;
+  margin-bottom:20px;
+  text-transform:uppercase;
+  box-shadow: 0 2px 10px rgba(255,45,45,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hero .badge:hover {
+  transform:scale(1.05);
+  box-shadow: 0 4px 20px rgba(255,45,45,0.3);
+}
+
+.hero h1 {
+  font-size:60px;
+  font-weight:800;
+  line-height:1.1;
+  color:white;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  margin:20px 0;
+}
+
+.hero p {
+  margin-top:15px;
+  color:var(--muted);
+  font-size:20px;
+}
+
+.hero .btn {
+  display:inline-block;
+  margin-top:30px;
+  padding:16px 32px;
+  background:linear-gradient(135deg, #ff2d2d, #ff5252);
+  color:white;
+  border-radius:14px;
+  font-weight:700;
+  text-decoration:none;
+  box-shadow:0 10px 30px rgba(255,45,45,0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hero .btn:hover {
+  transform:scale(1.05);
+  box-shadow:0 12px 40px rgba(255,45,45,0.4);
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">🔥 <strong>ExtinMovil</strong></div>
+
+  <!-- Botón hamburguesa para móviles -->
+  <div class="menu-toggle" id="menu-toggle">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#ciudades">Cobertura</a></li>
+    <li><a href="#nosotros">Sobre Nosotros</a></li>
+    <li><a href="#cotizar">Contacto</a></li>
+    <li><a href="#servicios-digitales">Recarga</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="badge">Recarga Ahora desde Colombia</div>
+  <h1>Recarga de Extintores<br>Profesional y Rápida</h1>
+  <p>Bogotá · Bucaramanga · Cartagena — Extintores Para Vehiculos</p>
+  <a class="btn" href="#cotizar">Solicitar Cotización</a>
+</section>
+
+<div class="container">
+
+<!-- SERVICIOS -->
+<!-- SERVICIOS -->
+<section id="servicios" class="section">
+  <h2>Servicios</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3><i class="fas fa-fire-extinguisher"></i> Recarga certificada</h3>
+      <p>Recarga bajo normativa vigente con garantía de seguridad.</p>
+    </div>
+
+    <div class="card">
+      <h3><i class="fas fa-tools"></i> Mantenimiento preventivo</h3>
+      <p>Inspección técnica completa para asegurar funcionamiento óptimo.</p>
+    </div>
+
+    <div class="card">
+      <h3><i class="fas fa-file-alt"></i> Certificación oficial</h3>
+      <p>Documentos válidos para cumplimiento normativo empresarial.</p>
+    </div>
+
+    <div class="card">
+      <h3><i class="fas fa-truck"></i> Recolección y entrega</h3>
+      <p>Servicio express en zonas principales de cada ciudad.</p>
+    </div>
+
+    <div class="card">
+      <h3><i class="fas fa-shield-alt"></i> Inspección de seguridad</h3>
+      <p>Evaluación de riesgos y estado de equipos contra incendios.</p>
+    </div>
+
+    <div class="card">
+      <h3><i class="fas fa-industry"></i> Servicio para empresas</h3>
+      <p>Planes especiales para industrias, oficinas y comercios.</p>
+    </div>
+
+    <div class="card">
+      <h3><i class="fas fa-home"></i> Servicio para hogares</h3>
+      <p>Recarga y revisión de extintores residenciales.</p>
+    </div>
+
+    <div class="card">
+      <h3><i class="fas fa-bolt"></i> Atención urgente 24/7</h3>
+      <p>Respuesta rápida para emergencias y requerimientos inmediatos.</p>
+    </div>
+
+  </div>
+</section>
+<!-- SOBRE NOSOTROS -->
+<section id="nosotros" class="section">
+  <div class="container">
+    <h2>Sobre Nosotros</h2>
+
+    <div class="grid" style="grid-template-columns: 1fr; gap:20px;">
+
+      <div class="card">
+        <h3><i class="fas fa-shield-alt"></i> Nuestra misión</h3>
+        <p>
+          Brindar servicios de recarga y mantenimiento de extintores en Colombia
+          con rapidez, profesionalismo y cumpliendo con todas las normas de seguridad, protegiendo vidas y bienes.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3><i class="fas fa-eye"></i> Nuestra visión</h3>
+        <p>
+          Ser líderes en seguridad contra incendios en Colombia, expandiendo nuestra cobertura a nuevas ciudades y ofreciendo atención inmediata, confiable y certificada.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3><i class="fas fa-users"></i> Nuestro equipo</h3>
+        <p>
+          Contamos con técnicos certificados y profesionales capacitados para garantizar que cada extintor recargado o inspeccionado cumpla con los más altos estándares de seguridad.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3><i class="fas fa-bolt"></i> Nuestro compromiso</h3>
+        <p>
+          Atención rápida, personalizada y segura, con recolección y entrega express, para empresas, industrias y hogares en Bogotá, Bucaramanga y Cartagena.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- CIUDADES -->
+<!-- COBERTURA -->
+<section id="ciudades" class="section">
+  <h2>Cobertura en Colombia</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3><i class="fas fa-map-marker-alt"></i> Bogotá</h3>
+      <p>
+        Atención en toda la ciudad y área metropolitana: empresas, oficinas,
+        conjuntos residenciales e industria.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3><i class="fas fa-city"></i> Bucaramanga</h3>
+      <p>
+        Servicio rápido en el área metropolitana con cobertura para comercios,
+        industrias y hogares.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3><i class="fas fa-umbrella-beach"></i> Cartagena</h3>
+      <p>
+        Cobertura especializada para hoteles, turismo, restaurantes y zonas portuarias.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3><i class="fas fa-industry"></i> Soporte industrial</h3>
+      <p>
+        Atención a plantas, bodegas y sectores industriales en las principales ciudades.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3><i class="fas fa-shipping-fast"></i> Servicio express</h3>
+      <p>
+        Recolección y entrega rápida según disponibilidad en cada zona.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3><i class="fas fa-globe-americas"></i> Expansión nacional</h3>
+      <p>
+        Estamos ampliando cobertura a más ciudades en Colombia con atención progresiva.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+</div>
+<section id="servicios-digitales" class="section">
+  <div class="container" style="text-align:center;">
+
+    <h2 style="margin-bottom:20px;">Servicios Digitales</h2>
+
+    <p style="max-width:800px; margin:0 auto 40px; opacity:0.8;">
+      Facilitamos métodos digitales rápidos y seguros para que puedas solicitar nuestros servicios sin complicaciones.
+    </p>
+
+    <div class="grid" style="grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:20px; justify-items:center;">
+
+      <div class="card">
+        <i class="fas fa-wallet" style="font-size:28px;"></i>
+        <h3>Recarga Nequi PSE</h3>
+        <p>
+          Te asesoramos para realizar recarga por Nequi al momento de solicitar cualquiera de nuestros servicios industriales.
+        </p>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-mobile-alt" style="font-size:28px;"></i>
+        <h3>Pago Digital</h3>
+        <p>
+          Aceptamos pagos digitales rápidos para agilizar la atención y entrega del servicio.
+        </p>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-bolt" style="font-size:28px;"></i>
+        <h3>Proceso Rápido</h3>
+        <p>
+          Te guiamos paso a paso para confirmar tu pago y activar el servicio de forma inmediata.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- CTA -->
+<!-- CONTACTO -->
+<section id="cotizar" class="cta">
+  <h2>Contacto</h2>
+  <p>Estamos disponibles para atenderte en cualquier momento</p>
+
+  <div class="container">
+    <div class="grid">
+
+      <div class="card">
+        <h3><i class="fas fa-envelope"></i> Email</h3>
+        <p>extinmovil@gmail.com</p>
+      </div>
+
+      <div class="card">
+        <h3><i class="fab fa-whatsapp"></i> WhatsApp</h3>
+        <p>301 327 8781</p>
+        <a class="btn" href="https://wa.me/573013278781" target="_blank">
+          Recarga en Linea
+        </a>
+      </div>
+
+      <div class="card">
+        <h3><i class="fas fa-map-marker-alt"></i> Dirección</h3>
+        <p>
+          Cl. 31 #61-60<br>
+          Bogotá · Bucaramanga · Cartagena
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- LEGAL -->
+<section id="legal" class="section">
+  <div class="container">
+    <h2>Términos, Condiciones y Privacidad</h2>
+
+    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:20px;">
+      <!-- TÉRMINOS Y CONDICIONES -->
+      <div class="card">
+        <h3><i class="fas fa-file-contract"></i> Términos y Condiciones</h3>
+        <p>
+          El uso de nuestros servicios implica la aceptación de los siguientes términos:
+        </p>
+        <p>
+          • Los servicios de recarga y mantenimiento están sujetos a disponibilidad.<br>
+          • Los tiempos de entrega pueden variar según la ciudad.<br>
+          • No nos hacemos responsables por el uso indebido de los equipos una vez entregados.<br>
+          • Las cotizaciones tienen una validez limitada según condiciones del mercado.
+        </p>
+      </div>
+
+      <!-- POLÍTICA DE PRIVACIDAD -->
+      <div class="card">
+        <h3><i class="fas fa-user-shield"></i> Política de Privacidad</h3>
+        <p>
+          La información recopilada a través de nuestros canales es utilizada únicamente para fines comerciales y de contacto.
+        </p>
+        <p>
+          • No compartimos datos personales con terceros.<br>
+          • La información de contacto se usa solo para responder solicitudes.<br>
+          • El usuario puede solicitar la eliminación de sus datos en cualquier momento.<br>
+          • Protegemos la información bajo estándares de seguridad razonables.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="container" style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:20px; padding:40px 20px;">
+
+    <!-- CONTACTO -->
+    <div style="flex:1; min-width:200px;">
+      <h3>Contacto</h3>
+      <p><i class="fas fa-envelope"></i> extinmovil@gmail.com</p>
+      <p><i class="fab fa-whatsapp"></i> 301 327 8781</p>
+      <p><i class="fas fa-map-marker-alt"></i> Cl. 31 #61-60, Bogotá · Bucaramanga · Cartagena</p>
+    </div>
+
+    <!-- ENLACES RÁPIDOS -->
+    <div style="flex:1; min-width:200px;">
+      <h3>Menu</h3>
+      <ul style="list-style:none; padding:0; margin:0;">
+        <li><a href="#servicios" style="color:var(--muted); text-decoration:none;">Servicios</a></li>
+        <li><a href="#servicios-digitales" style="color:var(--muted); text-decoration:none;">Recarga</a></li>
+        <li><a href="#ciudades" style="color:var(--muted); text-decoration:none;">Cobertura</a></li>
+        <li><a href="#nosotros" style="color:var(--muted); text-decoration:none;">Sobre Nosotros</a></li>
+        <li><a href="#legal" style="color:var(--muted); text-decoration:none;">Términos y Privacidad</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div style="text-align:center; padding:20px; border-top:1px solid rgba(255,255,255,0.1); color:var(--muted);">
+    © 2026 ExtinMovil Colombia — Seguridad que protege vidas
+  </div>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/573013278781" target="_blank">
+WhatsApp
+</a>
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+</body>
+</html>
